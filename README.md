@@ -1,13 +1,30 @@
-# Project_4
 
-- Repo URL : https://github.uio.no/jonathel/Project_4
+# Simulating a two-dimensional Ising model using the Metropolis-Hastings algorithm. 
+
+<img src="figures/evolution.png" width="1000">
+
+
+## Abstract
+
+The two-dimensional Ising model is used to study the phase transition of ferromagnets. To
+simulate the model, we use a parallelized version of the Metropolis-Hastings algorithm. First, we
+calculate the analytical solution of a model with a square $2\times2$ lattice and use the analytical results
+to verify our implementation of the model. We found that for a $20\times20$ lattice, the model needs
+approximately 105 Monte Carlo cycles to reach equilibrium. We estimate the probability distribution
+of the expected energy per spin and found that the variance for the temperature $T = 1$ $J/kB$ was of
+order 103 smaller than for the temperature $T = 2.4$ $J/kB$. When using OpenMP to parallelize our
+code we made it run approximately 4 times faster using 8 threads. Lastly, we simulate the model
+for four different lattice sizes to study the phase transition. We use these simulated values to find
+an estimate of the critical temperature for an infinite Ising model. We find this to be 
+$\approx 2.269282$ $J/kB$, which is close to the analytical result of $1 / \ln(1+\sqrt{2}) \approx 2.269185$  $J/kB$.
 
 ## Authors
 
-- Tov Uberg Tyvold (tovut@math.uio.no)
 - Sophus B Gullbekk (sophusbg@math.uio.no)
-- Jonathan Larsen (jonathel@math.uio.no) 
 - Erlend Kristensen (erlek@math.uio.no)
+- Tov Uberg Tyvold (tovut@math.uio.no)
+- Jonathan Larsen (jonathel@math.uio.no) 
+
 
 ## Compile and run
 
